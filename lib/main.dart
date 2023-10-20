@@ -1,14 +1,21 @@
+import 'package:class_carrot_market_v1/screens/main_screens.dart';
+import 'package:class_carrot_market_v1/theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(CarrotMarketUI());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class CarrotMarketUI extends StatelessWidget {
+  const CarrotMarketUI({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      title: '당근마켓',
+      debugShowCheckedModeBanner: false,
+      home: MainScreens(),
+      theme: themeData(),
+    );
   }
 }
